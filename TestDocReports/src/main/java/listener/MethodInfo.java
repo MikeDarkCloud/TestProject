@@ -1,11 +1,11 @@
 package listener;
 
 public class MethodInfo {
-    public  String method_name;   //被测试的方法名称
-    public  String result= "";       //测试用例执行结果
+    public  String method_name;       // 被测试的方法名称
+    public  String result= "";        // 测试用例执行结果
     public  String error_msg=null;    // 测试执行失败原因
-    public  Object expected="";  // 期待值
-    public  Object actual="";    // 实际值
+    public  Object expected="";       // 期待值
+    public  Object actual="";         // 实际值
 
 
     String getMethod_name() {

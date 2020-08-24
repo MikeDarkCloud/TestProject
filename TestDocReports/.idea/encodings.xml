@@ -5,6 +5,16 @@
     <file url="file://$PROJECT_DIR$/src/main/java/listener/MethodInfo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/listener/MyResultRecorder.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/listener/TestRecorder.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repoers" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repoers/demo_report_style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repoers/test11.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/FileUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/HtmlFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/HtmlReportFormatter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/HtmlUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/IFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/RecordStore.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/report/TestDemo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/runcase/Execute.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/testcase/DocleverFanc.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/testcase/DocleverLoginTestCase.java" charset="GBK" />

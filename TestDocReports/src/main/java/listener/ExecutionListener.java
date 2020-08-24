@@ -1,21 +1,21 @@
 package listener;
-
-import com.doclever.report.HtmlFile;
 import org.junit.runner.Description;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
+import report.HtmlFile;
+import runcase.Execute;
 
 import java.io.IOException;
 import java.util.List;
 
 public class ExecutionListener extends RunListener {
     MyResultRecorder recorder;
-    HtmlFile hf = new HtmlFile();
     List<MethodInfo> list ;
     MethodInfo  methodInfo= new MethodInfo();
+    HtmlFile hf = new HtmlFile(methodInfo);
     public ExecutionListener() throws IOException {
-        hf.createLog("C:\\github\\TestCreateReport\\src\\main\\java\\repoers\\test11.html");
+        this.hf.createLog("F:\\JavaProjectFile\\TestProject\\TestDocReports\\src\\main\\java\\repoers\\test11.html");
         recorder = new MyResultRecorder();
 
     }
@@ -29,8 +29,8 @@ public class ExecutionListener extends RunListener {
     }
 
     public void testRunFinished(Result result) throws Exception {
-        recorder.setResult(result.wasSuccessful());
-        recorder.setList(list);
+        recorder.setResult(String.valueOf( result.wasSuccessful() ));
+//        recorder.setList(list);
         recorder.setCount_case(recorder.getCount_case()+result.getRunCount());
         recorder.setCount_case_fail(recorder.getCount_case_fail()+result.getFailureCount());
         recorder.setCount_case_pass(recorder.getCount_case_pass()+(result.getRunCount()-result.getFailureCount()));

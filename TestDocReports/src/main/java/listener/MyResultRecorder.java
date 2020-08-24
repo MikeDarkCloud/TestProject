@@ -1,16 +1,18 @@
 package listener;
 
 import java.util.List;
+import java.util.logging.Formatter;
+import java.util.logging.LogRecord;
 
-public class MyResultRecorder {
-    String script_name;     //测试脚本文件名称
-    List<MethodInfo> list;  //存放每一个测试用例的执行结果
-    Boolean result;         //测试执行结果
-    int count_case = 0;     //测试用例数量
-    int count_case_pass=0;  //测试用例执行通过数量
-    int count_case_fail=0;  //测试用例执行不通过数量
-    int count_case_Ignore=0;//测试用例执行忽略数量
-    long Runtime = 0;       //测试用例脚本执行时间
+public class MyResultRecorder extends Formatter {
+    public static String script_name;     //测试脚本文件名称
+//    static List<MethodInfo> list = (List<MethodInfo>) new MethodInfo();  //存放每一个测试用例的执行结果
+    public static String result;         //测试执行结果
+    public static int count_case = 0;     //测试用例数量
+    public static int count_case_pass=0;  //测试用例执行通过数量
+    public static int count_case_fail=0;  //测试用例执行不通过数量
+    public static int count_case_Ignore=0;//测试用例执行忽略数量
+    public static long Runtime = 0;       //测试用例脚本执行时间
 
 
     public long getRuntime() {
@@ -61,20 +63,25 @@ public class MyResultRecorder {
         this.script_name = script_name;
     }
 
-    public List<MethodInfo> getList() {
-        return list;
-    }
+//    public List<MethodInfo> getList() {
+//        return list;
+//    }
 
-    public void setList(List<MethodInfo> list) {
-        this.list = list;
-    }
+//    public void setList(List<MethodInfo> list) {
+//        this.list = list;
+//    }
 
-    public Boolean getResult() {
+    public String getResult() {
         return result;
     }
 
-    public void setResult(Boolean result) {
+    public void setResult(String result) {
         this.result = result;
+    }
+
+    @Override
+    public String format(LogRecord record) {
+        return null;
     }
 
 //    @Override
