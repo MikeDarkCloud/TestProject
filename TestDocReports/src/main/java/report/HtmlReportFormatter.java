@@ -33,9 +33,9 @@ public class HtmlReportFormatter extends Formatter {
 		i = i + 1;
 		return i;
 	}
-
+	StringBuffer buf = new StringBuffer(1000);
 	public String format(LogRecord rec) {
-		StringBuffer buf = new StringBuffer(1000);
+
 		// Bold any levels >= WARNING
 //		buf.append("<div class=\"statistics\">");
 		buf.append("<tr>");

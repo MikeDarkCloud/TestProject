@@ -13,6 +13,7 @@ public class Execute {
     //定义一个全局的报告模板
     public static HtmlReportFormatter ht= new HtmlReportFormatter();
     public static MyResultRecorder re = new MyResultRecorder();
+
     public static void main(String[] args) throws IOException {
         run(DocleverLoginTestCase.class, DocleverSettingTestCase.class);
     }
@@ -21,6 +22,7 @@ public class Execute {
         /**
          * 循环执行测试套件
          */
+
         for (Class<?> clazz : classes) {
             JUnitCore runner = new JUnitCore();
             ExecutionListener listener = new ExecutionListener();

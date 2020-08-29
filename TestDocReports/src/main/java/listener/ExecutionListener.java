@@ -15,8 +15,8 @@ public class ExecutionListener extends RunListener {
     MethodInfo  methodInfo= new MethodInfo();
     HtmlFile hf = new HtmlFile(methodInfo);
     public ExecutionListener() throws IOException {
-        this.hf.createLog("F:\\JavaProjectFile\\TestProject\\TestDocReports\\src\\main\\java\\repoers\\test11.html");
-        recorder = new MyResultRecorder();
+        this.hf.createLog("C:\\github\\TestProject\\TestDocReports\\src\\main\\java\\repoers\\test1.html");
+        recorder = Execute.re;
 
     }
 
@@ -29,7 +29,7 @@ public class ExecutionListener extends RunListener {
     }
 
     public void testRunFinished(Result result) throws Exception {
-        recorder.setResult(String.valueOf( result.wasSuccessful() ));
+        recorder.setResult(String.valueOf( result.wasSuccessful()));
 //        recorder.setList(list);
         recorder.setCount_case(recorder.getCount_case()+result.getRunCount());
         recorder.setCount_case_fail(recorder.getCount_case_fail()+result.getFailureCount());
@@ -58,7 +58,7 @@ public class ExecutionListener extends RunListener {
     public void testFailure(Failure failure) throws Exception {
         methodInfo.setResult("false");
         methodInfo.setError_msg(failure.getMessage());
-        hf.write(failure.getTestHeader(), "Fail",failure.getMessage());
+        hf.write(failure.getTestHeader(), failure.getMessage());
     }
 
     public void testIgnored(Description description) throws Exception {
